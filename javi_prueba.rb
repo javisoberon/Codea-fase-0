@@ -4,18 +4,22 @@ def dummy_encrypt(string)
   string.reverse.swapcase.gsub(/[aeio]/,"*")
 end
 def max_letter_frequency_per_word(sentence)
-    sentence.split.select{|word| word.length > 3}.map{ |w| w.count("e") }.max
+    #sentence.split.select{|word| word.length > 3}.map{ |w| w.count("e") }.max
+    array = words_longer_than(sentence.split, 3)
+    numberletters = letter_per_word(array,"e")
+    moreletters = numbers_larger_than(numberletters)
 end
 
 def words_longer_than(array,num)
-  sentence.split.select{|word| word.length > 3}
+  array.select{|word| word.length > num}
 end
 
 def letter_per_word(array,letter)
-  words_longer_than.map{ |w| w.count("e") }.max
+  array.map{ |w| w.count(letter) }
 end
 
 def numbers_larger_than(num_array)
+  num_array.max
 end
 
 
