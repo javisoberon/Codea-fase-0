@@ -1,5 +1,3 @@
-
-
 class Person
 LIFE_STAGE = { childhood: 12, teenager: 19, adult: 50 }
 LEGAL_AGE = 18
