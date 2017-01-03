@@ -1,3 +1,4 @@
+
 def pordos(list)
   nones = selectnones(list)
   pares = selectpares(list)
