@@ -1,3 +1,4 @@
+p first = Time.now
 def pig_latin_word
   p "Write a word"
   word = gets.chomp
@@ -45,3 +46,6 @@ end
 
 pig_latin_word
 pig_latin_sentence
+
+p second = Time.now
+p second - first
