@@ -1,15 +1,3 @@
-# def binary_search(num,array)
-#   i = ((array.length-1) / 2).ceil
-#   until array[i] == num
-#     if array[i] > num
-#       i = (i / 2).ceil
-#     else
-#       i = (i * 2).ceil
-#     end
-#   end
-#   i
-# end
-
 def binary_search(num,array)
 
 first = 0
