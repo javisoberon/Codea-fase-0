@@ -17,33 +17,25 @@ def fibonacci_iterative(num)
   end
 end
 
-p fibonacci_iterative(0) == 0
-p fibonacci_iterative(1) == 1
-p fibonacci_iterative(2) == 1
-p fibonacci_iterative(3) == 2
-p fibonacci_iterative(4) == 3
-p fibonacci_iterative(5) == 5
+100000.times do
+  fibonacci_iterative(15)
+end
 
 end
 
 time2 = Benchmark.realtime do
-  
+
 def fibonacci_recursive(num)
-  if num == 0
-    0
-  elsif num == 1
-    1
+  if num < 2
+    num
   else
     fibonacci_recursive(num - 1) +  fibonacci_recursive(num - 2)
   end
 end
 
-p fibonacci_recursive(0) == 0
-p fibonacci_recursive(1) == 1
-p fibonacci_recursive(2) == 1
-p fibonacci_recursive(3) == 2
-p fibonacci_recursive(4) == 3
-p fibonacci_recursive(5) == 5
+100000.times do
+  fibonacci_recursive(15)
+end
 
 end
 
