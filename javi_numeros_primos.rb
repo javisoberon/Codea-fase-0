@@ -32,11 +32,10 @@ end
 def mult_primes(x)
   answer = []
   num = x
-  begin
+  while x != 1
     answer << divisible(x, prime_array(x))
     x = multiplicative(x, divisible(x, prime_array(x))) 
-  end while multiplicative(x, divisible(x, prime_array(x))) != 1
-  answer << num / answer.reduce(:*)
+  end 
   answer.reverse!
 end
 
@@ -44,5 +43,4 @@ def prime_factors(num)
   "#{num} : #{mult_primes(num).join(" * ")}"
 end
 
-
-p prime_factors(1560)
+p prime_factors(1200)
