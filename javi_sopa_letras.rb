@@ -40,10 +40,10 @@ class Board
   def search_rows(matrix, word)
     matrix.each do |placeholder|
       if placeholder.include?(word) == true
-        p "Encontre la palabra #{word} en el renglon #{matrix.index(placeholder) + 1}"
+        p "Encontre la palabra #{word}"
         break
       elsif placeholder.reverse.include?(word) == true
-        p "Encontre la palabra #{word} escrita al revés en el renglon #{matrix.index(placeholder) + 1}"
+        p "Encontre la palabra #{word}"
         break
       end
     end
